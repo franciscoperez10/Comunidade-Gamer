@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleindex.css">
     <title>Homepage</title>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR / TODOS -->
 
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Shadow Core</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Jogos</a>
-              <a class="nav-link" href="#">Torneios & Fórum </a>
-              <a class="nav-link" href="#">Loja</a>
-              <a class="nav-link" href="#">Contacto</a>
-              <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo" class="logo"></a>     
+          
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Jogos</a>
+          <a class="nav-link" href="#">Torneios & Fórum</a>
+          <a class="nav-link" href="#">Loja</a>
+          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </nav>
 
-                            
+      <!-- HERO SECTION // TODOS -->
+
+        <div class="hero-section">
+        <img src="imagens/hero-bg.jpg" alt="Hero Background" class="hero-background">        
+        <div class="container">
+          <div class="hero-content" justify-content="center">
+            <p class="game-tag">Jogo do Mês</p>
+            <h1 class="game-title">Blue Prince</h1>
+            <p class="game-description">Um título enigmático que promete uma experiência única, combinando elementos de aventura e mistério.</p>
+            <div class="game-indicators">
+              <div class="indicator"></div>
+              <div class="indicator active"></div>
+              <div class="indicator"></div>
+              <div class="indicator"></div>
             </div>
           </div>
         </div>
-      </nav>
+      </div>   
     
     <!-- 1º CARROSSEL  -->
       <div id="carouselExampleIndicators" class="carousel slide">
@@ -41,13 +55,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
+            <img src="imagens/hero-bg.jpg" class="d-block w-100" alt="banner">
           </div>
           <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
+            <img src="imagens/hero-bg-2.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
+            <img src="imagens/hero-bg-3.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -60,156 +74,151 @@
         </button>
       </div>
 
-    <!-- BARRA DE PESQUISA -->
+    <!-- BARRA DE PESQUISA / TODOS -->
       <form class="navbar-form navbar-right">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
          
         </div>
-        <button type="submit" class="btn btn-danger">submit</button>
+        <button type="search" class="btn btn-danger">Search</button>
       </form>
 
 
     <!-- GUIAS BÁSICOS -->
-     <div class="row row-cols-1 row-cols-md-3 g-4">
-        <h2 class="carousel-title">Guias Básicos</h2>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <div class="container my-5">
+      <h2 class="section-title">Guias Básicos &gt;</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game1.png" class="card-img-top" alt="RAGE">
+            <div class="card-body">
+              <h5 class="card-title">Consolas</h5>
+            </div>
           </div>
         </div>
-        <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game2.png" class="card-img-top" alt="Gammes">
+            <div class="card-body">
+              <h5 class="card-title">Gammes</h5>
             </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game3.png" class="card-img-top" alt="Consolas">
+            <div class="card-body">
+              <h5 class="card-title">Consolas</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game4.png" class="card-img-top" alt="Consolas">
+            <div class="card-body">
+              <h5 class="card-title">Consolas</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game5.png" class="card-img-top" alt="Consolas">
+            <div class="card-body">
+              <h5 class="card-title">Consolas</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card game-card">
+            <img src="imagens/game6.png" class="card-img-top" alt="Consolas">
+            <div class="card-body">
+              <h5 class="card-title">Consolas</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+ 
+
+  <!-- DESCONTOS EM DESTAQUE // DENISE --> 
+    
+  <div class="container my-5">
+  <h2 class="section-title">Descontos em destaque <span>&gt;</span></h2>
+  
+  <div class="game-carousel">
+      <div class="row">
+          <div class="col-md-2">
+              <div class="game-card">
+                  <img src="imagens/game7.png" alt="Game" class="img-fluid">
+                  <button class="add-btn">+Adicionar</button>
+              </div>
+              <p class="game-title">Hunger Games</p>
+              <p class="game-price">€45,99</p>
+          </div>
+          <div class="col-md-2">
+            <div class="game-card">
+                <img src="imagens/game8.png" alt="Game" class="img-fluid">
+                <button class="add-btn">+Adicionar</button>
+            </div>
+            <p class="game-title">League of Legengs</p>
+            <p class="game-price">€45,99</p>
+          </div>
+          <div class="col-md-2">
+            <div class="game-card">
+                <img src="imagens/game9.png" alt="Game" class="img-fluid">
+                <button class="add-btn">+Adicionar</button>
+            </div>
+            <p class="game-title">PUBG</p>
+            <p class="game-price">€45,99</p>
+          </div>
+          <div class="col-md-2">
+            <div class="game-card">
+                <img src="imagens/game10.png" alt="Game" class="img-fluid">
+                <button class="add-btn">+Adicionar</button>
+            </div>
+            <p class="game-title">Fire Emblem: Echoes</p>
+            <p class="game-price">€45,99</p>
+          </div>
+          <div class="col-md-2">
+            <div class="game-card">
+                <img src="imagens/game11.png" alt="Game" class="img-fluid">
+                <button class="add-btn">+Adicionar</button>
+            </div>
+            <p class="game-title">Galaxy Invaders</p>
+            <p class="game-price">€45,99</p>
+          </div>
+          <div class="col-md-2">
+            <div class="game-card">
+                <img src="imagens/game12.png" alt="Game" class="img-fluid">
+                <button class="add-btn">+Adicionar</button>
+            </div>
+            <p class="game-title">Dark Planet</p>
+            <p class="game-price">€45,99</p>
+      </div>
+  </div>
+</div>
+
+
+  <!-- FÓRUM BARRA -->
+
+  <div class="container my-5">
+  <h2 class="section-title">Fórum <span>&gt;</span></h2>  
+  <ul class="nav nav-tabs forum-tabs mb-4">
+      <li class="nav-item">
+          <a class="nav-link active" href="#">Última Atividade</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Comunidade</a>
+      </li>
+  </ul>  
+  <div class="forum-posts">
+      <div class="forum-post">
+          <!-- Conteúdo posts do fórum -->
+      </div>
+  </div>
   </div>
 
-  <!-- DESCONTOS EM DESTAQUE -->
-    <div class="container-fluid game-carousel">
-        <h2 class="carousel-title">Descontos em destaque</h2>
-        <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-2">
-                         <div class="game-card">
-                            <img src="" alt="">
-                            <button-class="add-btn">+Adicionar</button>
-                         </div>
-                         <p class="game-title">COMANDOS ORIGIN</p>
-                         <p class="game-price">15,99€</p>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="game-card">
-                                <img src="/api/placeholder/400/500" alt="League of Legend">
-                                <button class="add-btn">+Adicionar</button>
-                            </div>
-                            <p class="game-title">LEAGUE OF LENGEND</p>
-                            <p class="game-price">€65,99</p>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="game-card">
-                                <img src="/api/placeholder/400/500" alt="PUBG">
-                                <button class="add-btn">+Adicionar</button>
-                            </div>
-                            <p class="game-title">COMANDOS ORIGIN</p>
-                            <p class="game-price">€15,99</p>
-                        </div>
-                        
-                        <div class="col-md-2">
-                            <div class="game-card">
-                                <img src="/api/placeholder/400/500" alt="PUBG">
-                                <button class="add-btn">+Adicionar</button>
-                            </div>
-                            <p class="game-title">FIRE EMBLEM</p>
-                            <p class="game-price">€15,99</p>
-                        </div>  
-
-                        <div class="col-md-2">
-                            <div class="game-card">
-                                <img src="/api/placeholder/400/500" alt="Game 5">
-                                <button class="add-btn">+Adicionar</button>
-                            </div>
-                            <p class="game-title">COMANDOS ORIGIN</p>
-                            <p class="game-price">Grátis</p>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="game-card">
-                                <img src="/api/placeholder/400/500" alt="Game 6">
-                                <button class="add-btn">+Adicionar</button>
-                            </div>
-                            <p class="game-title">THE LEGEND OF ZELDA: OCARINA OF TIME</p>
-                            <p class="game-price">€25,99</p>
-                        </div>
-                    </div>
-                    <button class="carousel-control-next" type="button" data-bs data-bs-target="#gameCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FÓRUM BARRA -->
-    <div class="container my-4">
-        <div class="forum-header">
-            <h2 class="forum-title">Fórum</h2>>
-        </div>
-
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">"Últimas Atividades</a>
-            </li>
-            <li class="nav-item>">
-                <a class="nav-link active" href="#">"Comunidade</a>
-            </li>
-        </ul>
 
     <!-- 2 BLOCOS TEXTO COMMUNITY & FAQ -->
         <div class="forum-post">
@@ -230,7 +239,7 @@
             <img src="">
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER // TODOS -->
     <footer class="site-footer">
         <div class="container">
             <div class="social-links">
