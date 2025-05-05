@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Loja de Jogos</title>
+  <link rel="stylesheet" href="loja.css" />
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.getElementById('carousel');
+      const cards = Array.from(carousel.children);
+      const cardWidth = cards[0].offsetWidth + 15;
+      const visibleCards = Math.floor(carousel.offsetWidth / cardWidth);
+  
+      const prepend = cards.slice(-visibleCards).map(card => card.cloneNode(true));
+      const append = cards.slice(0, visibleCards).map(card => card.cloneNode(true));
+  
+      prepend.forEach(clone => carousel.insertBefore(clone, carousel.firstChild));
+      append.forEach(clone => carousel.appendChild(clone));
+  
+      let startScroll = visibleCards * cardWidth;
+      carousel.scrollLeft = startScroll;
+  
+      carousel.addEventListener('scroll', () => {
+        if (carousel.scrollLeft <= 0) {
+          carousel.scrollLeft = cards.length * cardWidth;
+        } else if (carousel.scrollLeft >= (cards.length + visibleCards) * cardWidth) {
+          carousel.scrollLeft = startScroll;
+        }
+      });
+  
+      let autoScroll;
+      function startAutoScroll() {
+        autoScroll = setInterval(() => {
+          carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }, 1500);
+      }
+  
+      function stopAutoScroll() {
+        clearInterval(autoScroll);
+      }
+  
+      startAutoScroll();
+  
+      carousel.addEventListener('mouseenter', stopAutoScroll);
+      carousel.addEventListener('mouseleave', startAutoScroll);
+
+    });
+    function scrollCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const card = carousel.querySelector('.carousel-card');
+    const cardWidth = card.offsetWidth + 15; 
+    carousel.scrollBy({
+      left: direction * cardWidth,
+      behavior: 'smooth'
+    });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="capitulo"><h2>Loja</h2></div>
+  </header>
+
+  <section class="section">
+    <a href="#" style="text-decoration: none; color: inherit;"><h2>Jogos populares ></h2></a>
+    <div class="grid">
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="destiny.png" alt="Game 1">
+          <div class="price">49,99€</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="pubg.png" alt="Game 2">
+          <div class="price">29,99€</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="fire.png" alt="Game 3">
+          <div class="price">39,99€</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="arrow.png" alt="Game 4">
+          <div class="price">9,99€</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="witcher.png" alt="Game 5">
+          <div class="price">44,99€</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="purple.png" alt="Game 6">
+          <div class="price">19,99€</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <a href="#" style="text-decoration: none; color: inherit;"><h2>Merchandising ></h2></a>
+    <div class="carousel-container">
+      <button class="nav left" onclick="scrollCarousel(-1)">&lt;</button>
+      <div class="carousel-track" id="carousel">
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="chess.jpg" alt="Chess">
+            <div>"CHESS" T-SHIRT<br>45,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="cube.jpg" alt="Cube">
+            <div>"CUBE" T-SHIRT<br>65,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="call_of_duty.jpg" alt="Call of Duty">
+            <div>"CALL OF DUTY" T-SHIRT<br>15,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="alien.jpg" alt="Alien">
+            <div>"ALIEN T-SHIRT"<br>45,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="dragon.jpg" alt="Dragon">
+            <div>"DRAGON" T-SHIRT<br>Grátis</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="command.jpg" alt="Command">
+            <div>"COMMAND" T-SHIRT<br>26,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="minecraft.jpg" alt="Minecraft">
+            <div>"MINECRAFT" T-SHIRT<br>26,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="car.png" alt="Car Race">
+            <div>"CAR RACE" T-SHIRT<br>76,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="space.jpg" alt="Space">
+            <div>"SPACE" T-SHIRT<br>17,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="life.jpg" alt="Life Simulator">
+            <div>"LIFE SIMULATOR" T-SHIRT<br>6,99€</div>
+          </a>
+        </div>
+        <div class="carousel-card">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <img src="guild.jpg" alt="Guild Wars">
+            <div>"GUILD WARS" T-SHIRT<br>89,99€</div>
+          </a>
+        </div>
+      </div>
+      <button class="nav right" onclick="scrollCarousel(1)">&gt;</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <a href="#" style="text-decoration: none; color: inherit;"><h2>Jogos com Desconto ></h2></a>
+    <div class="grid">
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="katana.png" alt="Game 1">
+          <div class="price">50%</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="halo.png" alt="Game 2">
+          <div class="price">60%</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="lara.png" alt="Game 3">
+          <div class="price">40%</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="gta.png" alt="Game 4">
+          <div class="price">20%</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="assassins.png" alt="Game 5">
+          <div class="price">10%</div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <img src="god.png" alt="Game 6">
+          <div class="price">30%</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

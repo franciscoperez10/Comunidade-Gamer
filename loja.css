@@ -1,0 +1,134 @@
+body {
+    background-color: #1e1e1e;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .capitulo {
+    width: 95%;
+    margin: 20px auto;
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  
+  .section {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .game-card {
+    position: relative;
+  }
+  
+  .game-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .price {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .carousel-container {
+    position: relative;
+    overflow: hidden; 
+    padding: 0 20px;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .nav:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+  }
+  
+  .nav.left {
+    left: 7px; 
+  }
+  
+  .nav.right {
+    right: 7px; 
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel-card {
+    flex: 0 0 auto;
+    width: 300px;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+  }  
+  
+  .carousel-card img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-card {
+      flex: 0 0 calc(100% / 2); /* Show 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-card {
+      flex: 0 0 100%; /* One card per row on very small screens */
+    }
+  }
