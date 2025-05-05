@@ -6,10 +6,12 @@ body {
     padding: 20px;
   }
   
+
+  /* section PROXIMOS EVENTOS */
   section {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #383838;
+    background-color: #38383800;
     padding: 20px;
     border-radius: 8px;
   }
