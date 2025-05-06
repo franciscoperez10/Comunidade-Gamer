@@ -245,7 +245,82 @@
       margin-right: 50px;
     }
    
-  /* FOOTER */
+  
+  /* NAO MEXER DAQUI PARA CIMA ^\_____ */
+
+
+  /* DESTAQUES DO SEMESTRE */
+  .carousel-overlay {
+    position: relative;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6); /* Overlay preto transparente */
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s;
+    width: max-content;
+    margin: 0 auto;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-slide img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  }
+  
+  .carousel-caption {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .carousel-caption span {
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .carousel-caption span:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 2em;
+    padding: 8px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .carousel-btn.left { left: 20px; }
+  .carousel-btn.right { right: 20px; }
+  
+
+
+  /* FOOTER NAO MEXER */
   
   .footer {
     background-color: #0a0a0a;
@@ -298,9 +373,4 @@
     font-weight: bold;
     text-align: center;
   }
-  
-  /* NAO MEXER DAQUI PARA CIMA ^\_____ */
-
-
-  /* DESTAQUES DO SEMESTRE */
   
