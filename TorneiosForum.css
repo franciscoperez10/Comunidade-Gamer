@@ -8,6 +8,92 @@ body {
 
 
 
+/* DESTAQUES DO SEMESTRE */
+.destaques-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  margin: 0;
+  padding: 40px 0 20px 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.destaques-titulo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.destaques-titulo {
+  color: #fff;
+  text-align: center;
+  font-family: 'Raj';
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+}
+
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 220px;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-text {
+  color: #fff;
+  margin-top: 12px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.carousel-arrow {
+  background: #222c;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  margin: 0 16px;
+  transition: background 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: #fff2;
+}
+
 
   /* section PROXIMOS EVENTOS */
   section {
@@ -37,7 +123,7 @@ body {
     font-weight: bold;
   }
 
-  /*barra branca */
+  /* barra branca */
   .barra {
     background-color: white;
     color: #282828;
