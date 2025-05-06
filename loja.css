@@ -1,27 +1,30 @@
 body {
-    background-color: #1e1e1e;
+    background-color: #313030;
     font-family: 'Rajdhani', sans-serif;
     color: white;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin-left: 0px; /* Add left margin */
+    margin-right: 0px; /* Add right margin */
   }
   
   .capitulo {
     width: 95%;
     margin: 20px auto;
     display: block;
-    padding: 5px;
+    padding: 10px;
     font-size: 16px;
-    background-color: #000;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 10px;
     text-align: left;
-  }
-  
-  
+}
+
   .section {
     padding: 20px;
+    max-width: calc(100% - 200px); /* Adjust content width by removing the 100px margin on each side */
+    margin: 0 auto; /* Center align content */
   }
   
   h2 {
@@ -36,12 +39,24 @@ body {
   }
   
   .game-card {
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
     position: relative;
+    display: inline-block;
   }
+
+  .game-card:hover {
+    transform: translateY(-5px);
+}
   
   .game-card img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.3s ease;
   }
   
   .price {
@@ -59,6 +74,17 @@ body {
     position: relative;
     overflow: hidden; 
     padding: 0 20px;
+  }
+
+  .cart-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 8%;           
+    max-width: 40px;      
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
   }
   
   .nav {
@@ -112,6 +138,14 @@ body {
     text-align: center;
     color: white;
     box-sizing: border-box;
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
   }  
   
   .carousel-card img {
@@ -119,7 +153,238 @@ body {
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
   }
+
+  .carousel-card:hover {
+    transform: translateY(-5px);
+}
+
+.add-button {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background-color: #28a745; /* green */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+
+  .add-button-2 {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background-color: #28a745; /* green */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease;
+  }
+
+  .add-button-2:hover {
+    background-color: #218838;
+  }
+
+  .footer {
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  .dynamic-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .dynamic-link h2 {
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .dynamic-link:hover h2 {
+    color: #007BFF;         /* Change text color on hover */
+    transform: translateX(5px); /* Slight movement to the right */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    height: 60px; /* adjust as needed */
+  }
+  
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cart-icon {
+    width: 24px;
+  }
+  
+  .carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    height: 100%;
+    width: 100%; /* 3 slides */
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 1 0 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .overlay h1 {
+    font-size: 48px;
+    color: #00FFEE;
+    margin: 10px 0;
+  }
+  
+  .tagline {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 30px;
+    margin-right: 8px;
+    background-color: white;
+    display: inline-block;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+  
+  .dot.active {
+    opacity: 1;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #222;
+  }
+  
+  .search-bar input {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 12px 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+  
 
   @media (max-width: 768px) {
     .carousel-card {

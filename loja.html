@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <title>Loja de Jogos</title>
   <link rel="stylesheet" href="loja.css" />
   <script>
@@ -56,49 +58,132 @@
       behavior: 'smooth'
     });
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    const totalSlides = slides.length;
+    currentSlide = (index + totalSlides) % totalSlides;
+
+    const offset = -currentSlide * 100;
+    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+  }
+
+  // Auto-advance every 5 seconds
+  setInterval(() => {
+    showSlide(currentSlide + 1);
+  }, 5000);
+
+  // Dot click events
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+    });
+  });
+});
   </script>
+
+<header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Shadow Core Logo" class="logo">
+    </div>
+    <nav>
+      <a href="#">JOGOS</a>
+      <a href="#">TORNEIOS & FORUM</a>
+      <a href="#">LOJA</a>
+      <a href="#">CONTACTO</a>
+      <a href="#"><img src="cart-icon.png" alt="Carrinho" class="cart-icon"></a>
+    </nav>
+  </header>
+  
+
+  <section class="carousel">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('hero-bg.jpg');">
+        <div class="overlay">
+          <p class="tagline">JOGO DO MÊS</p>
+          <h1>GREEN PRINCE</h1>
+          <p class="description">Um título enigmático que promete uma experiência única, combinando elementos de aventura e mistério</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('hero-bg-2.png');">
+        <div class="overlay">
+            <p class="tagline">JOGO DO ANO</p>
+            <h1>PINK KING</h1>
+            <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável</p>
+          </div>
+      </div>
+      <div class="slide" style="background-image: url('hero-bg-3.png');">
+        <div class="overlay">
+            <p class="tagline">JOGO DA DÉCADA</p>
+            <h1>BLUE WARRIOR</h1>
+            <p class="description">O Chamado Oculto: Aventura e Intriga em Território Inexplorado</p>
+          </div>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
 </head>
 <body>
-  <header>
-    <div class="capitulo"><h2>Loja</h2></div>
-  </header>
+
+    <header>
+        <div class="capitulo"><h2>Loja</h2></div>
+        </header>
 
   <section class="section">
-    <a href="#" style="text-decoration: none; color: inherit;"><h2>Jogos populares ></h2></a>
+    <a href="#" class="dynamic-link" style="text-decoration: none; color: inherit;"><h2>Jogos populares ></h2></a>
     <div class="grid">
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="destiny.png" alt="Game 1">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">49,99€</div>
+          <!-- <img src="cart-icon.png" alt="Cart" class="cart-icon" /> -->
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="pubg.png" alt="Game 2">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">29,99€</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="fire.png" alt="Game 3">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">39,99€</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="arrow.png" alt="Game 4">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">9,99€</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="witcher.png" alt="Game 5">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">44,99€</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="purple.png" alt="Game 6">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">19,99€</div>
         </a>
       </div>
@@ -106,73 +191,84 @@
   </section>
   
   <section class="section">
-    <a href="#" style="text-decoration: none; color: inherit;"><h2>Merchandising ></h2></a>
+    <a href="#" class="dynamic-link" style="text-decoration: none; color: inherit;"><h2>Merchandising ></h2></a>
     <div class="carousel-container">
       <button class="nav left" onclick="scrollCarousel(-1)">&lt;</button>
       <div class="carousel-track" id="carousel">
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="chess.jpg" alt="Chess">
+            <button class="add-button">+ Adicionar</button>
             <div>"CHESS" T-SHIRT<br>45,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="cube.jpg" alt="Cube">
+            <button class="add-button">+ Adicionar</button>
             <div>"CUBE" T-SHIRT<br>65,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="call_of_duty.jpg" alt="Call of Duty">
-            <div>"CALL OF DUTY" T-SHIRT<br>15,99€</div>
+            <button class="add-button">+ Adicionar</button>
           </a>
+          <div>"CALL OF DUTY" T-SHIRT<br>15,99€</div>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="alien.jpg" alt="Alien">
+            <button class="add-button">+ Adicionar</button>
             <div>"ALIEN T-SHIRT"<br>45,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="dragon.jpg" alt="Dragon">
+            <button class="add-button">+ Adicionar</button>
             <div>"DRAGON" T-SHIRT<br>Grátis</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="command.jpg" alt="Command">
+            <button class="add-button">+ Adicionar</button>
             <div>"COMMAND" T-SHIRT<br>26,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="minecraft.jpg" alt="Minecraft">
+            <button class="add-button">+ Adicionar</button>
             <div>"MINECRAFT" T-SHIRT<br>26,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="car.png" alt="Car Race">
+            <button class="add-button">+ Adicionar</button>
             <div>"CAR RACE" T-SHIRT<br>76,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="space.jpg" alt="Space">
+            <button class="add-button">+ Adicionar</button>
             <div>"SPACE" T-SHIRT<br>17,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="life.jpg" alt="Life Simulator">
+            <button class="add-button">+ Adicionar</button>
             <div>"LIFE SIMULATOR" T-SHIRT<br>6,99€</div>
           </a>
         </div>
         <div class="carousel-card">
           <a href="#" style="text-decoration: none; color: inherit;">
             <img src="guild.jpg" alt="Guild Wars">
+            <button class="add-button">+ Adicionar</button>
             <div>"GUILD WARS" T-SHIRT<br>89,99€</div>
           </a>
         </div>
@@ -182,41 +278,47 @@
   </section>
 
   <section class="section">
-    <a href="#" style="text-decoration: none; color: inherit;"><h2>Jogos com Desconto ></h2></a>
+    <a href="#" class="dynamic-link" style="text-decoration: none; color: inherit;"><h2>Jogos com Desconto ></h2></a>
     <div class="grid">
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="katana.png" alt="Game 1">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">50%</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="halo.png" alt="Game 2">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">60%</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="lara.png" alt="Game 3">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">40%</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="gta.png" alt="Game 4">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">20%</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="assassins.png" alt="Game 5">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">10%</div>
         </a>
       </div>
       <div class="game-card">
         <a href="#" style="text-decoration: none; color: inherit;">
           <img src="god.png" alt="Game 6">
+          <button class="add-button-2">+ Adicionar</button>
           <div class="price">30%</div>
         </a>
       </div>
@@ -224,4 +326,16 @@
   </section>
   
 </body>
+
+<footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>©2025 · TM SHADOW CORE, inc. Todos os direitos reservados.</p>
+  </footer>
+  
+
 </html>
