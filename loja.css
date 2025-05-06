@@ -1,16 +1,26 @@
+:root {
+  --primary-color: #grey;
+  --dark-bg: #0c1620;
+  --darker-bg: #080e14;
+  --text-color: #ffffff;
+  --nav-hover: #00e6b8;
+  --font-family: 'Rajdhani', sans-serif;
+}
+
 body {
     background-color: #313030;
     font-family: 'Rajdhani', sans-serif;
     color: white;
     margin: 0;
     padding: 0px;
-    margin-left: 0px; /* Add left margin */
-    margin-right: 0px; /* Add right margin */
+    margin-left: 0px; 
+    margin-right: 0px;
   }
   
   .capitulo {
     width: 95%;
     margin: 20px auto;
+    margin-left: 120px;
     display: block;
     padding: 10px;
     font-size: 16px;
@@ -23,8 +33,8 @@ body {
 
   .section {
     padding: 20px;
-    max-width: calc(100% - 200px); /* Adjust content width by removing the 100px margin on each side */
-    margin: 0 auto; /* Center align content */
+    max-width: calc(100% - 200px); 
+    margin: 0 auto;
   }
   
   h2 {
@@ -86,8 +96,75 @@ body {
     object-fit: contain;
     cursor: pointer;
   }
+
+  .navbar-brand {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand::before {
+    content: ' ';
+    background-image: url('imagens/logo.png');
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.navbar-toggler {
+    border-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='var(--primary-color)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar.nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: var(--text-color);
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--nav-hover);
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active:after {
+    content: ' ';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
   
-  .nav {
+  /* .nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -116,7 +193,7 @@ body {
   
   .nav.right {
     right: 7px; 
-  }
+  } */
   
   .carousel-track {
     display: flex;
@@ -164,7 +241,7 @@ body {
     position: absolute;
     bottom: 60px;
     right: 10px;
-    background-color: #28a745; /* green */
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -184,7 +261,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 10px;
-    background-color: #28a745; /* green */
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -249,8 +326,8 @@ body {
   }
   
   .dynamic-link:hover h2 {
-    color: #007BFF;         /* Change text color on hover */
-    transform: translateX(5px); /* Slight movement to the right */
+    color: #00e6b8;        
+    transform: translateX(5px);
   }
   
   * {
@@ -278,7 +355,7 @@ body {
   }
   
   .logo {
-    height: 60px; /* adjust as needed */
+    height: 60px; 
   }
   
   nav {
@@ -305,7 +382,7 @@ body {
   .slides {
     display: flex;
     height: 100%;
-    width: 100%; /* 3 slides */
+    width: 100%; 
     transition: transform 0.5s ease;
   }
   
@@ -345,6 +422,11 @@ body {
   }
   
   .dots {
+    display: flex;
+    justify-content: center; /* horizontally center the dots */
+    position: relative;      /* or static, depending on your layout */
+    width: 100%;             /* full width so it can center its content */
+    margin: 0 auto;
     position: absolute;
     bottom: 40px;
     left: 60px;
@@ -385,15 +467,27 @@ body {
     cursor: pointer;
   }
   
+  .custom-form {
+    display: flex;
+    justify-content: flex-end;   /* push it to the right */
+    padding: 30px 0;             /* space above and below */
+  }
+  
+  .custom-form .form-control {
+    width: 550px;                /* control input size */
+    height: 40px;                /* control height */
+    font-size: 14px;
+    margin-right: 50px;
+  }
 
   @media (max-width: 768px) {
     .carousel-card {
-      flex: 0 0 calc(100% / 2); /* Show 2 cards per row on smaller screens */
+      flex: 0 0 calc(100% / 2); 
     }
   }
   
   @media (max-width: 480px) {
     .carousel-card {
-      flex: 0 0 100%; /* One card per row on very small screens */
+      flex: 0 0 100%;
     }
   }
