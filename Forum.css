@@ -1,0 +1,306 @@
+:root {
+    --primary-color: #grey;
+    --dark-bg: #0c1620;
+    --darker-bg: #080e14;
+    --text-color: #ffffff;
+    --nav-hover: #00e6b8;
+    --font-family: 'Rajdhani', sans-serif;
+  }
+  
+  body {
+      background-color: #313030;
+      font-family: 'Rajdhani', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0px;
+      margin-left: 0px; 
+      margin-right: 0px;
+    }
+    
+    .capitulo {
+      width: 95%;
+      margin: 20px auto;
+      margin-left: 120px;
+      display: block;
+      padding: 10px;
+      font-size: 16px;
+      background-color: hsla(0, 0%, 0%, 0.60);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      text-align: left;
+  }
+  
+    .section {
+      padding: 20px;
+      max-width: calc(100% - 200px); 
+      margin: 0 auto;
+    }
+    
+    h2 {
+      font-size: 20px;
+      font-family: 'Rajdhani', sans-serif;
+      margin-bottom: 10px;
+    }
+    
+    
+    
+    
+  
+    .navbar-brand {
+      color: var(--text-color);
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+  }
+  
+  .navbar-brand::before {
+      content: ' ';
+      
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 8px;
+      display: inline-block;
+  }
+  
+  .navbar-toggler {
+      border-color: var(--primary-color);
+  }
+  
+  .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='var(--primary-color)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-collapse {
+      justify-content: flex-end;
+  }
+  
+  .navbar-nav {
+      margin-left: auto;
+  }
+  
+  .navbar.nav {
+      margin-left: auto;
+  }
+  
+  .nav-link {
+      color: var(--text-color);
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+  }
+  
+  .nav-link:hover {
+      color: var(--nav-hover);
+      text-decoration: none;
+  }
+  
+  .nav-link.active {
+      color: var(--primary-color);
+  }
+  
+  .nav-link.active:after {
+      content: ' ';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+  }
+    
+    
+    
+    
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+  
+    }
+    
+
+    
+    .logo {
+      height: 60px; 
+    }
+    
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .cart-icon {
+      width: 24px;
+    }
+    
+    .carousel {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .slides {
+      display: flex;
+      height: 100%;
+      width: 100%; 
+      transition: transform 0.5s ease;
+    }
+    
+    .slide {
+      flex: 1 0 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .overlay {
+      max-width: 700px;
+      padding: 20px;
+    }
+    
+    .overlay h1 {
+      font-size: 48px;
+      color: #00FFEE;
+      margin: 10px 0;
+    }
+    
+    .tagline {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .description {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    
+    .dots {
+      display: flex;
+      justify-content: center; /* horizontally center the dots */
+      position: relative;      /* or static, depending on your layout */
+      width: 100%;             /* full width so it can center its content */
+      margin: 0 auto;
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+    }
+    
+    .dot {
+      height: 12px;
+      width: 30px;
+      margin-right: 8px;
+      background-color: white;
+      display: inline-block;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+    
+    .dot.active {
+      opacity: 1;
+    }
+    
+    
+    .search-bar input {
+      padding: 12px;
+      width: 300px;
+      border: none;
+      outline: none;
+    }
+    
+    
+    .custom-form {
+      display: flex;
+      justify-content: flex-end;   /* push it to the right */
+      padding: 30px 0;             /* space above and below */
+    }
+    
+    .custom-form .form-control {
+      width: 550px;                /* control input size */
+      height: 40px;                /* control height */
+      font-size: 14px;
+      margin-right: 50px;
+    }
+   
+  /* FOOTER */
+  
+  .footer {
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+ 
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    font-size: 30px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* NAO MEXER DAQUI PARA CIMA ^\_____ */
+
+
+  /* DESTAQUES DO SEMESTRE */
+  
