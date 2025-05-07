@@ -21,6 +21,7 @@ body {
     width: 95%;
     margin: 20px auto;
     margin-left: 120px;
+    margin-right: 120px;
     display: block;
     padding: 10px;
     font-size: 16px;
@@ -164,37 +165,6 @@ body {
     background-color: var(--primary-color);
 }
   
-  /* .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 2px solid white;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-  }
-  
-  .nav:hover {
-    background-color: rgba(255, 255, 255, 0.3); 
-  }
-  
-  .nav.left {
-    left: 7px; 
-  }
-  
-  .nav.right {
-    right: 7px; 
-  } */
-  
   .carousel-track {
     display: flex;
     gap: 15px;
@@ -334,7 +304,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
   }
   
   .navbar {
@@ -358,9 +328,36 @@ body {
     height: 60px; 
   }
   
-  nav {
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4); 
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  /* round shape */
+    cursor: pointer;
+    z-index: 20;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
     gap: 30px;
+  }
+
+  .nav:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .nav.left {
+    left: 10px;
+  }
+  
+  .nav.right {
+    right: 10px;
   }
   
   nav a {
@@ -368,10 +365,7 @@ body {
     color: white;
     font-weight: bold;
   }
-  
-  .cart-icon {
-    width: 24px;
-  }
+
   
   .carousel {
     position: relative;
@@ -469,13 +463,13 @@ body {
   
   .custom-form {
     display: flex;
-    justify-content: flex-end;   /* push it to the right */
-    padding: 30px 0;             /* space above and below */
+    justify-content: flex-end;   
+    padding: 30px 0;            
   }
   
   .custom-form .form-control {
-    width: 550px;                /* control input size */
-    height: 40px;                /* control height */
+    width: 550px;                
+    height: 40px;                
     font-size: 14px;
     margin-right: 50px;
   }
