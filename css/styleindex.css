@@ -112,6 +112,37 @@ body {
     padding: 0 20px;
 }
 
+.custom-form {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+.form-control {
+    background-color: var(--dark-bg, #0c1620);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color, #ffffff);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-family: var(--font-family, 'Rajdhani', sans-serif);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-form::after {
+    content: '\f002'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white
+}
+
 .game-card {
     background-color: var(--dark-bg);
     border: none;
@@ -218,6 +249,58 @@ body {
     object-fit: cover;
 }
 
+/* Carousel Arrow Styles */
+.game-carousel {
+    position: relative;
+    padding: 0 30px; /* Add some padding to make room for arrows */
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--primary-color, #00e6b8);
+    color: var(--darker-bg, #080e14);
+}
+
+.carousel-prev {
+    left: -15px;
+}
+
+.carousel-next {
+    right: -15px;
+}
+
+.add-to-cart {
+    display: block;
+    text-align: center;
+    color: var(--text-color, #ffffff);
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    color: var(--nav-hover, #00e6b8);
+}
+
 .site-footer {
     background: #111;
     padding: 40px 0 20px 0;
@@ -253,8 +336,6 @@ body {
     color: #ccc;
     margin-top: 10px;
 }
-
-
 
 @media (max-width: 992px) {
     .navbar-nav {

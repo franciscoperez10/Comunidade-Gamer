@@ -18,8 +18,7 @@
     <!-- NAVBAR E LOGO/ TODOS -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo" class="logo"></a>     
-          
+        <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo" class="logo"></a>  
         <div class="navbar-nav">
           <a class="nav-link" href="#">Jogos</a>
           <a class="nav-link" href="#">Torneios & Fórum</a>
@@ -49,14 +48,13 @@
       </div>   
     
     <!-- BARRA DE PESQUISA / TODOS -->
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-         
+    <div class="container">
+      <form class="custom-form">
+        <div class="form-group mb-0">
+          <input type="text" class="form-control" placeholder="Search">
         </div>
-        
-      </form> 
-
+      </form>
+    </div>
 
     <!-- GUIAS BÁSICOS -->
     <div class="container my-5">
@@ -117,7 +115,10 @@
   <div class="container my-5">
   <h2 class="section-title">Descontos em destaque <span>&gt;</span></h2>
   
-  <div class="game-carousel">
+  <div class="game-carousel position relative">
+    <button class="carousel-arrow carousel-prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
       <div class="row">
           <div class="col-md-2">
               <div class="game-card">
@@ -166,8 +167,12 @@
             </div>
             <p class="game-title">Dark Planet</p>
             <p class="game-price">129,99€</p>
+            <a href="#" class="add-to-cart">+Adicionar</a>
       </div>
   </div>
+  <button class="carousel-arrow carousel-next">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
 </div>
 
 
