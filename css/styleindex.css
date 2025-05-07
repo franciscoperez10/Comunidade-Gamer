@@ -117,10 +117,11 @@ body {
     margin: 0 auto;
     position: relative;
     top: -20px;
+    color:white
 }
 
 .form-control {
-    background-color: var(--dark-bg, #0c1620);
+    background-color: var(--dark-bg, white);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--text-color, #ffffff);
     padding: 10px 15px;
@@ -129,7 +130,7 @@ body {
 }
 
 .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
 }
 
 .custom-form::after {
