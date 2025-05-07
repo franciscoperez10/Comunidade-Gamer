@@ -18,9 +18,8 @@
     }
     
     .capitulo {
-      width: 95%;
+      width: 70%;
       margin: 20px auto;
-      margin-left: 120px;
       display: block;
       padding: 10px;
       font-size: 16px;
@@ -338,6 +337,8 @@
   }
 
   
+
+  
 /* Botoes abaixo da barra branca FPS MMO .. */
 .botoes {
   display: flex;
@@ -554,6 +555,7 @@
   transition: color .2s;
   margin-bottom: 2px;
   display: block;
+  margin-left: 24px;
 }
 
 .forum-title:hover {
