@@ -3,71 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja de Jogos</title>
+
+  <!-- Fonts e Ícones -->
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/
-  aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap" rel="stylesheet">
-  <title>Loja de Jogos</title>
   <link rel="stylesheet" href="Forum.css" />
+</head>
 
+<body>
 
-
-
-  
-  <script>
-// JAVA DA HERO
-    // Detecta quando chegar ao fim/início e faz o reset do scroll
-  carousel.addEventListener('scroll', () => {
-    if (carousel.scrollLeft <= 0) {
-      carousel.scrollLeft = cards.length * cardWidth;
-    } else if (carousel.scrollLeft >= (cards.length + visibleCards) * cardWidth) {
-      carousel.scrollLeft = startScroll;
-    }
-  });
-
-  // Auto-scroll com intervalo
-  let autoScroll;
-  function startAutoScroll() {
-    autoScroll = setInterval(() => {
-      carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    }, 1500);
-  }
-
-  function stopAutoScroll() {
-    clearInterval(autoScroll);
-  }
-
-  startAutoScroll();
-
-  // Pausar o auto-scroll com hover
-  carousel.addEventListener('mouseenter', stopAutoScroll);
-  carousel.addEventListener('mouseleave', startAutoScroll);
-
-  // JAVA DESTAQUES DO MES
-  // JavaScript simples para o carrossel
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const container = document.querySelector('.carousel-container');
-
-function moveCarousel(direction) {
-  const maxIndex = slides.length - 4; // Mostra 4 por vez
-  currentIndex += direction;
-  if (currentIndex < 0) currentIndex = 0;
-  if (currentIndex > maxIndex) currentIndex = maxIndex;
-  container.style.transform = `translateX(-${currentIndex * (slides[0].offsetWidth + 32)}px)`;
-}
-
-  
-  </script>
-
-
-
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="imagens/Logo_branco 1.png" alt="Logo" class="logo"></a>     
-        
       <div class="navbar-nav">
         <a class="nav-link" href="#">Jogos</a>
         <a class="nav-link" href="#">Torneios & Fórum</a>
@@ -77,35 +27,30 @@ function moveCarousel(direction) {
       </div>
     </div>
   </nav>
-  
 
-
-</head>
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
+  <!-- HERO CAROUSEL -->
   <section class="carousel">
     <div class="slides">
       <div class="slide active" style="background-image: url('imagens/hero-bg-2.png');">
         <div class="overlay">
           <p class="tagline">JOGO DO MÊS</p>
           <h1>GREEN PRINCE</h1>
-          <p class="description">Um título enigmático que promete uma experiência única, combinando elementos de aventura e mistério</p>
+          <p class="description">Um título enigmático que promete uma experiência única.</p>
         </div>
       </div>
       <div class="slide" style="background-image: url('imagens/hero-bg-3.png');">
         <div class="overlay">
-            <p class="tagline">JOGO DO ANO</p>
-            <h1>PINK KING</h1>
-            <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável</p>
-          </div>
+          <p class="tagline">JOGO DO ANO</p>
+          <h1>PINK KING</h1>
+          <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável.</p>
+        </div>
       </div>
-      <div class="slide" style="background-image: url('imageNs/hero-bg.jpg');">
+      <div class="slide" style="background-image: url('imagens/hero-bg.png');">
         <div class="overlay">
-            <p class="tagline">JOGO DA DÉCADA</p>
-            <h1>BLUE WARRIOR</h1>
-            <p class="description">O Chamado Oculto: Aventura e Intriga em Território Inexplorado</p>
-          </div>
+          <p class="tagline">JOGO DA DÉCADA</p>
+          <h1>BLUE WARRIOR</h1>
+          <p class="description">O Chamado Oculto: Aventura e Intriga em Território Inexplorado.</p>
+        </div>
       </div>
     </div>
     <div class="dots">
@@ -115,68 +60,43 @@ function moveCarousel(direction) {
     </div>
   </section>
 
+  <!-- Search -->
   <form class="custom-form">
     <div class="form-group mb-0">
       <input type="text" class="form-control" placeholder="Search">
     </div>
   </form>
-  
 
-    <header>
-        <div class="capitulo"><h2>Torneios</h2></div>
-        </header>
+  <!-- TORNEIOS -->
+  <header>
+    <div class="capitulo"><h2>Torneios</h2></div>
+  </header>
 
-
-
-<!--DESTAQUES DO SEMESTRE-->
-<h1>DESTAQUES DO SEMESTRE</h1>
-
-<!-- Overlay preto transparente ocupando a largura da página -->
-<div class="carousel-overlay">
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <a href="#link1">
-        <img src="imagens/Rectangle 6.png" alt="Jogo 1"/>
-        <div class="carousel-caption"><span>Jogo 1</span></div>
-      </a>
+  <!-- DESTAQUES DO SEMESTRE -->
+  <h1>DESTAQUES DO SEMESTRE</h1>
+  <div class="carousel-overlay">
+    <div class="carousel-container">
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 6.png" alt="Jogo 1"><div class="carousel-caption"><span>Jogo 1</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 2"><div class="carousel-caption"><span>Jogo 2</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 8.png" alt="Jogo 3"><div class="carousel-caption"><span>Jogo 3</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 9.png" alt="Jogo 4"><div class="carousel-caption"><span>Jogo 4</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 5"><div class="carousel-caption"><span>Jogo 5</span></div></a></div>
     </div>
-    <div class="carousel-slide">
-      <a href="#link2">
-        <img src="imagens/Rectangle 7.png" alt="Jogo 2"/>
-        <div class="carousel-caption"><span>Jogo 2</span></div>
-      </a>
-    </div>
-    <div class="carousel-slide">
-      <a href="#link3">
-        <img src="imagens/Rectangle 8.png" alt="Jogo 3"/>
-        <div class="carousel-caption"><span>Jogo 3</span></div>
-      </a>
-    </div>
-    <div class="carousel-slide">
-      <a href="#link4">
-        <img src="imagens/Rectangle 9.png" alt="Jogo 4"/>
-        <div class="carousel-caption"><span>Jogo 4</span></div>
-      </a>
-    </div>
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">&#60;</button>
+    <button class="carousel-btn right" onclick="moveCarousel(1)">&#62;</button>
   </div>
 
-  <!-- Botões para navegação -->
-  <button class="carousel-btn left" onclick="moveCarousel(-1)">&#60;</button>
-  <button class="carousel-btn right" onclick="moveCarousel(1)">&#62;</button>
-</div>
+  <!-- PRÓXIMOS EVENTOS -->
+  <h1>PRÓXIMOS EVENTOS</h1>
+
+  <div class="barra">TORNEIO HORA PREÇO</div>
+
+    
 
 
 
-  
-  
-  
-        
-
- 
-  
-</body>
-
-<footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -185,6 +105,49 @@ function moveCarousel(direction) {
     </div>
     <p>©2025 · TM SHADOW CORE, inc. Todos os direitos reservados.</p>
   </footer>
-  
 
+  <!-- SCRIPTS -->
+  <script>
+    window.addEventListener("load", () => {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const container = document.querySelector('.carousel-container');
+  
+      function moveCarousel(direction) {
+        const maxIndex = slides.length - 4;
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        container.style.transform = `translateX(-${currentIndex * (slideWidth + 32)}px)`;
+      }
+  
+      window.moveCarousel = moveCarousel;
+  
+      // Auto-slide HERO
+      const heroSlides = document.querySelectorAll(".slide");
+      const heroDots = document.querySelectorAll(".dot");
+      let slideIndex = 0;
+  
+      function showSlide(index) {
+        heroSlides.forEach(slide => slide.classList.remove("active"));
+        heroDots.forEach(dot => dot.classList.remove("active"));
+        heroSlides[index].classList.add("active");
+        heroDots[index].classList.add("active");
+      }
+  
+      function autoSlide() {
+        slideIndex = (slideIndex + 1) % heroSlides.length;
+        showSlide(slideIndex);
+      }
+  
+      setInterval(autoSlide, 5000);
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
 </html>

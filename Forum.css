@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #grey;
+    --primary-color: grey;
     --dark-bg: #0c1620;
     --darker-bg: #080e14;
     --text-color: #ffffff;
@@ -256,6 +256,7 @@
     background: rgba(0, 0, 0, 0.6); /* Overlay preto transparente */
     padding: 40px 0;
     overflow: hidden;
+    margin-bottom: 60px;
   }
   
   .carousel-container {
@@ -317,6 +318,26 @@
   
   .carousel-btn.left { left: 20px; }
   .carousel-btn.right { right: 20px; }
+
+
+  /* BARRA BRANCA TORNEIOS HORA PREÇP */
+  .barra {
+    background-color: white;
+    color: #282828;
+    padding: 12px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    box-sizing: border-box;
+    padding-left: 85px;
+    word-spacing: 12em;
+  }
+
+  
   
 
 
@@ -372,5 +393,6 @@
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
     text-align: center;
+    margin-top: 40px;
   }
   
