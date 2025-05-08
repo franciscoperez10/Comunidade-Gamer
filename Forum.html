@@ -15,23 +15,25 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="imagens/Logo_branco 1.png" alt="Logo" class="logo"></a>     
-      <div class="navbar-nav">
-        <a class="nav-link" href="#">Jogos</a>
-        <a class="nav-link" href="#">Torneios & Fórum</a>
-        <a class="nav-link" href="#">Loja</a>
-        <a class="nav-link" href="#">Contacto</a>
-        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
+<nav class="navbar custom-navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="#">
+      <img src="imagens/Logo_branco 1.png" alt="Logo" class="logo">
+    </a>
+    <div class="navbar-links">
+      <a class="nav-link" href="#">JOGOS</a>
+      <a class="nav-link" href="#">TORNEIOS & FÓRUM</a>
+      <a class="nav-link" href="#">LOJA</a>
+      <a class="nav-link" href="#">CONTACTO</a>
+      <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO CAROUSEL -->
   <section class="carousel">
     <div class="slides">
-      <div class="slide active" style="background-image: url('imagens/hero-bg.jpg');">
+      <div class="slide active" style="background-image: url('imagens/video_game-cyberpunk_2077-896078.jpeg');">
         <div class="overlay">
           <p class="tagline">JOGO DO MÊS</p>
           <h1>GREEN PRINCE</h1>
@@ -45,7 +47,7 @@
           <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável.</p>
         </div>
       </div>
-      <div class="slide" style="background-image: url('imagens/hero-bg.png');">
+      <div class="slide" style="background-image: url('imagens/fentezi-dom-lestnitsa-fantasticheskii-art-135558.jpeg');">
         <div class="overlay">
           <p class="tagline">JOGO DA DÉCADA</p>
           <h1>BLUE WARRIOR</h1>
@@ -74,23 +76,34 @@
   </header>
 
   <!-- DESTAQUES DO SEMESTRE -->
-  <h1>DESTAQUES DO SEMESTRE</h1>
+  <h1>DESTAQUES DO SEMESTRE</h1><br>
   <div class="carousel-overlay">
     <div class="carousel-container">
-      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 6.png" alt="Jogo 1"><div class="carousel-caption"><span>Jogo 1</span></div></a></div>
-      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 2"><div class="carousel-caption"><span>Jogo 2</span></div></a></div>
-      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 8.png" alt="Jogo 3"><div class="carousel-caption"><span>Jogo 3</span></div></a></div>
-      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 9.png" alt="Jogo 4"><div class="carousel-caption"><span>Jogo 4</span></div></a></div>
-      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 5"><div class="carousel-caption"><span>Jogo 5</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 6.png" alt="Jogo 1"><div class="carousel-caption"><span>JOGO 1</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 2"><div class="carousel-caption"><span>JOGO 2</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 8.png" alt="Jogo 3"><div class="carousel-caption"><span>JOGO 3</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/video_game-cyberpunk_2077-896078.jpeg" alt="Jogo 4"><div class="carousel-caption"><span>JOGO 4</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/video_game-fallout_3-city-fallout-rivet_city-sci_fi-ship-160774.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 5</span></div></a></div>
+       <div class="carousel-slide"><a href="#"><img src="imagens/video_game-halo_5_guardians-master_chief-358320 2.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 6</span></div></a></div>
+        <div class="carousel-slide"><a href="#"><img src="imagens/rectangle_10.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 7</span></div></a></div>
+         <div class="carousel-slide"><a href="#"><img src="imagens/rectangle_13.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 8</span></div></a></div>
     </div>
     <button class="carousel-btn left" onclick="moveCarousel(-1)">&#60;</button>
     <button class="carousel-btn right" onclick="moveCarousel(1)">&#62;</button>
   </div>
 
+
+
+
   <!-- PRÓXIMOS EVENTOS -->
   <h1>PRÓXIMOS EVENTOS</h1>
 
-  <div class="barra">TORNEIO HORA PREÇO</div>
+ <div class="barra">
+  <span>TORNEIO</span>
+  <span>HORA</span>
+  <span>PREÇO</span>
+</div>
+
 
   <!--Botoes abaixo da barra branca-->
   <div class="botoes">
@@ -191,7 +204,31 @@
       <span class="forum-number">23 123</span>
       <span class="forum-author">by Lorem Ipsum</span>
     </div>
+    <div class="forum-row">
+      <a href="#" class="forum-title">Qual o melhor jogo do mês?</a>
+      <span class="forum-number">23 123</span>
+      <span class="forum-author">by Lorem Ipsum</span>
+    </div>    
     <!-- Adicionar mais linhas conforme necessário -->
+  </div>
+</section>
+
+
+<!--navegaçao numeros forum-->
+<section class="navegacao-overlay">
+  <div class="navegacao-container">
+    <div class="numeracao">
+      <button class="num-btn">1</button>
+      <button class="num-btn">2</button>
+      <button class="num-btn">3</button>
+      <button class="num-btn">PRÓXIMA</button>
+      <button class="num-btn">>></button>
+    </div>
+
+    <!--BOTAO "NOVO" do Forum-->
+    <div class="botao-novo">
+      <button class="btn-novo">NOVO</button>
+    </div>
   </div>
 </section>
 
@@ -246,10 +283,15 @@
   
       setInterval(autoSlide, 5000);
     });
-  </script>
+
+</script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
+
+  
 
 
 </body>
