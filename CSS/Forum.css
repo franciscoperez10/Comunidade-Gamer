@@ -303,40 +303,63 @@
 
 
   /* DESTAQUES DO SEMESTRE */
-  .carousel-overlay {
-    position: relative;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.6); /* Overlay preto transparente */
-    padding: 40px 0;
-    overflow: hidden;
-    margin-bottom: 40px;
-  }
-  
-  .carousel-container {
-    display: flex;
-    gap: 32px;
-    transition: transform 0.5s;
-    width: max-content;
-    margin: 0 auto;
-  }
-  
+ .carousel-overlay {
+  position: relative;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6); /* Overlay preto transparente */
+  padding: 40px 0;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 32px;
+  transition: transform 0.5s;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 2em;
+  padding: 5px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn.left { left: 20px; }
+.carousel-btn.right { right: 20px; }
+
 .carousel-slide {
   flex: 0 0 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative; /* necessário para posicionamento interno */
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
 }
-  
-  .carousel-slide img {
-    width: 300px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-  }
-  
+
+.carousel-slide a {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 0 auto;
+}
+
 .carousel-caption {
   position: absolute;
   bottom: 10px;
@@ -358,25 +381,41 @@
 }
 
 .carousel-caption span:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    font-size: 2em;
-    padding: 5px 18px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-  }
-  
-  .carousel-btn.left { left: 20px; }
-  .carousel-btn.right { right: 20px; }
+
+/* Comentário abaixo da imagem */
+.carousel-comment {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  transition: font-weight 0.2s;
+}
+
+.carousel-comment:hover {
+  font-weight: bold;
+}
+
+
+
+/* Aqui está a correção do comentário */
+.carousel-comment {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  transition: font-weight 0.2s;
+}
+
+.carousel-comment:hover {
+  font-weight: bold;
+}
+
 
 
   /* BARRA BRANCA TORNEIOS HORA PREÇO */
@@ -458,6 +497,7 @@
 }
 
 .evento {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   background: #232323;
@@ -485,6 +525,7 @@
   
 }
 
+
 .evento-titulo {
   background: none;
   border: none;
@@ -509,12 +550,8 @@
 }
 
 .evento-hora {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #fff;
-  min-width: 60px;
-  text-align: center;
+  margin-right: auto; /* Empurra a hora mais para a esquerda */
+  margin-left: 24px; /* Garante espaçamento mínimo da info */
 }
 
 .evento-preco {
