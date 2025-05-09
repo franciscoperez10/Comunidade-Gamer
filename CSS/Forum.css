@@ -618,6 +618,7 @@
   padding: 12px 15vw;   /* Ajuste o padding lateral para alinhar com o conteúdo */
   box-sizing: border-box;
   margin: 18px 0 0 0;
+  
 }
 
 .forum-tabs-wrapper {
@@ -628,22 +629,23 @@
 
 .forum-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   border-bottom: 2px solid #333;
   padding: 18px 0 8px 0;
-  font-size: 1.15em;
-  min-height: 48px;
+}
+
+.forum-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
 }
 
 .forum-title {
-  flex: 2 1 0;
   color: #fff;
   text-decoration: none;
   font-size: 1.08em;
-  transition: color .2s;
-  margin-bottom: 2px;
-  display: block;
-  margin-left: 24px;
+  margin-bottom: 4px;
 }
 
 .forum-title:hover {
@@ -655,14 +657,12 @@
   color: #bdbdbd;
   font-size: 0.92em;
   font-weight: 400;
-  margin-top: 4px;
   line-height: 1.2em;
-  margin-left: 24px;
 }
 
 .forum-number {
   flex: 0 0 110px;
-  text-align: right;
+ 
   font-weight: bold;
   font-size: 1.09em;
   color: #fff;
@@ -678,7 +678,10 @@
   font-weight: 400;
 }
 
-
+.forum-number,
+.forum-author {
+  align-self: center;
+}
 
 /* botoes numeros forum */
 
@@ -690,7 +693,7 @@
   border: 1px solid white;
   border-radius: 12px;
   padding: 12px 24px;
-  margin: 30px auto;
+  margin: 10px auto;
   width: 70%;
   color: white;
   font-family: 'Rajdhani', sans-serif;
@@ -700,7 +703,7 @@
   background: rgba(0, 0, 0, 0.223); /* Overlay transparente */
   border-top: 1.5px solid lab(100% 0.01 -0.01 / 0.30);
   border-bottom: 1.5px solid lab(100% 0.01 -0.01 / 0.252);
-  padding: 20px 10vw;
+  padding: 10px 10vw;
   box-sizing: border-box;
   margin: 40px 0;
 }
@@ -709,6 +712,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  width: 85%;
+  margin: 0 auto;
 }
 
 .numeracao {
