@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja de Jogos</title>
+
+  <!-- Fonts e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/Forum.css" />
+
+  <script src="/JAVA/forum.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar custom-navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="#">
+      <img src="imagens/Logo_branco 1.png" alt="Logo" class="logo">
+    </a>
+    <div class="navbar-links">
+      <a class="nav-link" href="#">JOGOS</a>
+      <a class="nav-link" href="#">TORNEIOS & FÓRUM</a>
+      <a class="nav-link" href="#">LOJA</a>
+      <a class="nav-link" href="#">CONTACTO</a>
+      <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO CAROUSEL -->
+  <section class="carousel">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('imagens/video_game-cyberpunk_2077-896078.jpeg');">
+        <div class="overlay">
+          <p class="tagline">JOGO DO MÊS</p>
+          <h1>GREEN PRINCE</h1>
+          <p class="description">Um título enigmático que promete uma experiência única.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('imagens/hero-bg-3.png');">
+        <div class="overlay">
+          <p class="tagline">JOGO DO ANO</p>
+          <h1>PINK KING</h1>
+          <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('imagens/fentezi-dom-lestnitsa-fantasticheskii-art-135558.jpeg');">
+        <div class="overlay">
+          <p class="tagline">JOGO DA DÉCADA</p>
+          <h1>BLUE WARRIOR</h1>
+          <p class="description">O Chamado Oculto: Aventura e Intriga em Território Inexplorado.</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <form class="custom-form">
+    <div class="form-group mb-0">
+      <input type="text" class="form-control" placeholder="Search">
+    </div>
+  </form>
+
+  <!-- TORNEIOS -->
+  <header>
+    <div class="capitulo"><h2>Torneios</h2></div>
+  </header>
+
+  <!-- DESTAQUES DO SEMESTRE -->
+  <h1>DESTAQUES DO SEMESTRE</h1><br>
+  <div class="carousel-overlay">
+    <div class="carousel-container">
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 6.png" alt="Jogo 1"><div class="carousel-caption"><span>JOGO 1</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 7.png" alt="Jogo 2"><div class="carousel-caption"><span>JOGO 2</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/Rectangle 8.png" alt="Jogo 3"><div class="carousel-caption"><span>JOGO 3</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/video_game-cyberpunk_2077-896078.jpeg" alt="Jogo 4"><div class="carousel-caption"><span>JOGO 4</span></div></a></div>
+      <div class="carousel-slide"><a href="#"><img src="imagens/video_game-fallout_3-city-fallout-rivet_city-sci_fi-ship-160774.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 5</span></div></a></div>
+       <div class="carousel-slide"><a href="#"><img src="imagens/video_game-halo_5_guardians-master_chief-358320 2.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 6</span></div></a></div>
+        <div class="carousel-slide"><a href="#"><img src="imagens/rectangle_10.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 7</span></div></a></div>
+         <div class="carousel-slide"><a href="#"><img src="imagens/rectangle_13.jpeg" alt="Jogo 5"><div class="carousel-caption"><span>JOGO 8</span></div></a></div>
+    </div>
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">&#60;</button>
+    <button class="carousel-btn right" onclick="moveCarousel(1)">&#62;</button>
+  </div>
+
+
+
+
+  <!-- PRÓXIMOS EVENTOS -->
+  <h1>PRÓXIMOS EVENTOS</h1>
+
+ <div class="barra">
+  <span>TORNEIO</span>
+  <span>HORA</span>
+  <span>PREÇO</span>
+</div>
+
+
+  <!--Botoes abaixo da barra branca-->
+  <div class="botoes">
+    <button>FPS</button>
+    <button>MMO</button>
+    <button>BATLE</button>
+    <button>RACING</button>
+    <button>MOBA</button>
+    <button>RPG</button>
+    <button>METROINDVANIA</button>
+  </div>
+</section>
+
+    <!--CAIXAS DE PROXIMOS EVENTOS -->
+    <div class="eventos-lista">
+      <div class="evento">
+        <button class="evento-play">
+          <!-- Ícone play SVG -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="white"><polygon points="10,6 26,16 10,26"></polygon></svg>
+        </button>
+        <div class="evento-info">
+          <button class="evento-titulo">Lorem Ipsum is simply</button>
+          <div class="evento-desc">Lorem Ipsum is simply Lorem Ipsum is simply dummy tex</div>
+        </div>
+        <div class="evento-hora">19:00</div>
+        <div class="evento-preco"><span>40</span>COINS</div>
+        <button class="evento-apostar">APOSTAR</button>
+      </div>
+      <div class="evento">
+        <button class="evento-play">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="white"><polygon points="10,6 26,16 10,26"></polygon></svg>
+        </button>
+        <div class="evento-info">
+          <button class="evento-titulo">Lorem Ipsum is simply</button>
+          <div class="evento-desc">Lorem Ipsum is simply Lorem Ipsum is simply dummy tex</div>
+        </div>
+        <div class="evento-hora">19:00</div>
+        <div class="evento-preco"><span>40</span>COINS</div>
+        <button class="evento-apostar">APOSTAR</button>
+      </div>
+      <div class="evento">
+        <button class="evento-play">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="white"><polygon points="10,6 26,16 10,26"></polygon></svg>
+        </button>
+        <div class="evento-info">
+          <button class="evento-titulo">Lorem Ipsum is simply</button>
+          <div class="evento-desc">Lorem Ipsum is simply Lorem Ipsum is simply dummy tex</div>
+        </div>
+        <div class="evento-hora">19:00</div>
+        <div class="evento-preco"><span>40</span>COINS</div>
+        <button class="evento-apostar">APOSTAR</button>
+      </div>
+    </div>
+
+
+  <!-- FORUM -->
+  <header>
+    <div class="capitulo"><h2>Forum</h2></div>
+  </header>
+
+
+  <!--Botoes abaixo da barra branca-->
+  <div class="botoes">
+    <button>FPS</button>
+    <button>MMO</button>
+    <button>BATLE</button>
+    <button>RACING</button>
+    <button>MOBA</button>
+    <button>RPG</button>
+    <button>METROINDVANIA</button>
+  </div>
+</section>
+
+  <!-- TABS de COMUNIDADE E ATIVIDADE -->
+<div class="forum-list">
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Community Info &amp; FAQs</a>
+    </div>
+    <span class="forum-number">12 563</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Where does it come from?</a>
+    </div>
+    <span class="forum-number">12 563</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Community Servers</a>
+      <div class="forum-desc">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </div>
+    </div>
+    <span class="forum-number">12 563</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Community Servers</a>
+    </div>
+    <span class="forum-number">23 123</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Qual o melhor jogo do mês?</a>
+    </div>
+    <span class="forum-number">23 123</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Qual o melhor jogo do mês?</a>
+    </div>
+    <span class="forum-number">23 123</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+
+  <div class="forum-row">
+    <div class="forum-left">
+      <a href="#" class="forum-title">Graphic & Animation and Code</a>
+    </div>
+    <span class="forum-number">23 123</span>
+    <span class="forum-author">by Lorem Ipsum</span>
+  </div>
+</div>
+
+
+
+
+
+
+    <!-- Adicionar mais linhas conforme necessário -->
+  </div>
+</section>
+
+
+<!--navegaçao numeros forum-->
+<section class="navegacao-overlay">
+  <div class="navegacao-container">
+    <div class="numeracao">
+      <button class="num-btn">1</button>
+      <button class="num-btn">2</button>
+      <button class="num-btn">3</button>
+      <button class="num-btn">PRÓXIMA</button>
+      <button class="num-btn">>></button>
+    </div>
+
+    <!--BOTAO "NOVO" do Forum-->
+    <div class="botao-novo">
+      <button class="btn-novo">NOVO</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>©2025 · TM SHADOW CORE, inc. Todos os direitos reservados.</p>
+  </footer>
+
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  
+
+
+</body>
+</html>
