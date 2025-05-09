@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/CSS/Forum.css" />
+
+  <script src="/JAVA/forum.js"></script>
+
 </head>
 
 <body>
@@ -246,45 +249,7 @@
     <p>©2025 · TM SHADOW CORE, inc. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    window.addEventListener("load", () => {
-      let currentIndex = 0;
-      const slides = document.querySelectorAll('.carousel-slide');
-      const container = document.querySelector('.carousel-container');
   
-      function moveCarousel(direction) {
-        const maxIndex = slides.length - 4;
-        currentIndex += direction;
-        if (currentIndex < 0) currentIndex = 0;
-        if (currentIndex > maxIndex) currentIndex = maxIndex;
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        container.style.transform = `translateX(-${currentIndex * (slideWidth + 32)}px)`;
-      }
-  
-      window.moveCarousel = moveCarousel;
-  
-      // Auto-slide HERO
-      const heroSlides = document.querySelectorAll(".slide");
-      const heroDots = document.querySelectorAll(".dot");
-      let slideIndex = 0;
-  
-      function showSlide(index) {
-        heroSlides.forEach(slide => slide.classList.remove("active"));
-        heroDots.forEach(dot => dot.classList.remove("active"));
-        heroSlides[index].classList.add("active");
-        heroDots[index].classList.add("active");
-      }
-  
-      function autoSlide() {
-        slideIndex = (slideIndex + 1) % heroSlides.length;
-        showSlide(slideIndex);
-      }
-  
-      setInterval(autoSlide, 5000);
-    });
-
-</script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
