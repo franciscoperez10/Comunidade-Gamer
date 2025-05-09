@@ -110,7 +110,6 @@ body {
 
 .navbar-brand::before {
     content: ' ';
-    background-image: url('imagens/logo.png');
     width: 30px;
     height: 30px;
     background-size: contain;

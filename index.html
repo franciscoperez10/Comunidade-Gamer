@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/
-    aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styleindex.css">
@@ -19,7 +19,7 @@
         <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo" class="logo"></a>     
           
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Jogos</a>
+          <a class="nav-link" aria-current="page" href="#">Jogos</a>
           <a class="nav-link" href="#">Torneios & Fórum</a>
           <a class="nav-link" href="#">Loja</a>
           <a class="nav-link" href="#">Contacto</a>
@@ -29,36 +29,45 @@
     </nav>
 
       <!-- HERO SECTION // TODOS -->
-        <div class="hero-section">
-        <img src="imagens/hero-bg.jpg" alt="Hero Background" class="hero-background">        
-        <div class="container">
-          <div class="hero-content" justify-content="center">
-            <p class="game-tag">Jogo do Mês</p>
-            <h1 class="game-title">Blue Prince</h1>
-            <p class="game-description">Um título enigmático que promete uma experiência única, combinando elementos de aventura e mistério.</p>
-            <div class="game-indicators">
-              <div class="indicator"></div>
-              <div class="indicator active"></div>
-              <div class="indicator"></div>
-              <div class="indicator"></div>
+      <section class="carousel">
+        <div class="slides">
+          <div class="slide active" style="background-image: url('images/hero-bg.jpg');">
+            <div class="overlay">
+              <p class="tagline">JOGO DO MÊS</p>
+              <h1>GREEN PRINCE</h1>
+              <p class="description">Um título enigmático que promete uma experiência única, combinando elementos de aventura e mistério</p>
             </div>
           </div>
+          <div class="slide" style="background-image: url('images/hero-bg-2.png');">
+            <div class="overlay">
+                <p class="tagline">JOGO DO ANO</p>
+                <h1>PINK INVADER</h1>
+                <p class="description">Além da Cortina: Uma Odisseia de Mistério e Emoção Inigualável</p>
+              </div>
+          </div>
+          <div class="slide" style="background-image: url('images/hero-bg-3.png');">
+            <div class="overlay">
+                <p class="tagline">JOGO DA DÉCADA</p>
+                <h1>BLUE WARRIOR</h1>
+                <p class="description">O Chamado Oculto: Aventura e Intriga em Território Inexplorado</p>
+              </div>
+          </div>
         </div>
-      </div>   
-    
-    <!-- BARRA DE PESQUISA / TODOS -->
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-         
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
-        
-      </form> 
-
+      </section>
 
     <!-- GUIAS BÁSICOS -->
     <div class="container my-5">
-      <h2 class="section-title">Guias Básicos &gt;</h2>
+      <div class="guias-header">
+        <h2 class="section-title">Guias Básicos &gt;</h2>
+        <form class="search-form">
+          <input type="text" placeholder="Search">
+        </form>
+      </div>
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="card game-card">
@@ -70,7 +79,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card game-card">
-            <img src="imagens/game2.png" class="card-img-top" alt="Gammes">
+            <img src="imagens/game2.png" class="card-img-top" alt="PUBG">
             <div class="card-body">
               <h5 class="card-title">How to Play: PUBG</h5>
             </div>
@@ -78,7 +87,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card game-card">
-            <img src="imagens/game3.png" class="card-img-top" alt="Consolas">
+            <img src="imagens/game3.png" class="card-img-top" alt="Fire Emblem: Echoes">
             <div class="card-body">
               <h5 class="card-title">How to Play: Fire Emblem: Echoes</h5>
             </div>
@@ -86,7 +95,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card game-card">
-            <img src="imagens/game4.png" class="card-img-top" alt="Consolas">
+            <img src="imagens/game4.png" class="card-img-top" alt="Arrowverse">
             <div class="card-body">
               <h5 class="card-title">How to Play: Arrowverse</h5>
             </div>
@@ -94,7 +103,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card game-card">
-            <img src="imagens/game5.png" class="card-img-top" alt="Consolas">
+            <img src="imagens/game5.png" class="card-img-top" alt="The Witcher">
             <div class="card-body">
               <h5 class="card-title">How to Play: The Witcher</h5>
             </div>
@@ -102,9 +111,9 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card game-card">
-            <img src="imagens/game6.png" class="card-img-top" alt="Consolas">
+            <img src="imagens/game6.png" class="card-img-top" alt="Dark Planet">
             <div class="card-body">
-              <h5 class="card-title">How to Play: Dark Planet </h5>
+              <h5 class="card-title">How to Play: Dark Planet</h5>
             </div>
           </div>
         </div>
@@ -176,7 +185,7 @@
   <h2 class="section-title">Fórum <span>&gt;</span></h2>  
   <ul class="nav nav-tabs forum-tabs mb-4">
       <li class="nav-item">
-          <a class="nav-link active" href="#">Última Atividade</a>
+          <a class="nav-link" href="#">Última Atividade</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="#">Comunidade</a>
@@ -214,20 +223,17 @@
 
     <!-- FOOTER // TODOS -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-            </div>
-
-            <div class="copyright">
-                2025. TM SHADOW CORE, Inc. Todos os direitos reservados.
-            </div>
-        </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        ©2025 · TM SHADOW CORE, inc. Todos os direitos reservados.
+      </div>
     </footer>
-
+    <script src="script.js"></script>
 </div>
 </body>
 </html>
